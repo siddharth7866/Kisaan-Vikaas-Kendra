@@ -1,0 +1,27 @@
+---
+const pagetitle="About Me";
+const skills=['HTML','Javascript','Astro','React','SQL','Backend','DataBase'];
+let mood=true
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pagetitle}</title>
+	</head>
+	<body>
+		<h1>I am into about page.</h1>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <h1>I have below set of  skills:</h1>
+       <ul>{skills.map((x)=>(<li>{x}</li>))}</ul>
+       {mood=false}
+
+       {mood?<p>I will go for outing</p>:<p>I will introspect</p>}
+        
+	</body>
+</html>
